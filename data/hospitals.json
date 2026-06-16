@@ -1,0 +1,38 @@
+[
+  {
+    "id": "H1",
+    "name": "City General Hospital",
+    "lat": 28.6139,
+    "lng": 77.2090,
+    "address": "Central Avenue, New Delhi",
+    "organsInStock": ["Kidney", "Liver"],
+    "phone": "+91-11-23456789"
+  },
+  {
+    "id": "H2",
+    "name": "Metro Medical Centre",
+    "lat": 28.7041,
+    "lng": 77.1025,
+    "address": "Metro Road, Delhi NCR",
+    "organsInStock": ["Kidney", "Liver", "Cornea"],
+    "phone": "+91-11-34567890"
+  },
+  {
+    "id": "H3",
+    "name": "Central Heart Institute",
+    "lat": 28.5355,
+    "lng": 77.3910,
+    "address": "Heart Lane, Gurgaon",
+    "organsInStock": ["Heart", "Kidney"],
+    "phone": "+91-124-4567890"
+  },
+  {
+    "id": "H4",
+    "name": "South City Hospital",
+    "lat": 28.5244,
+    "lng": 77.1855,
+    "address": "South Extension, Delhi",
+    "organsInStock": ["Kidney", "Cornea"],
+    "phone": "+91-11-45678901"
+  }
+]

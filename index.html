@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeLink - Online Organ & Blood Donation Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
+          <path d="M16 28c-.3 0-.6-.1-.8-.3C14.2 26.5 4 17.3 4 11c0-3.9 3.1-7 7-7 2.2 0 4.2 1 5.6 2.6C18 4 20 3 22.2 3c3.9 0 7 3.1 7 7 0 6.3-10.2 15.5-11.2 16.7-.2.2-.5.3-.8.3zM11 6c-2.8 0-5 2.2-5 5 0 4.5 8.2 12.2 10 14 .5.5 1.2.5 1.7 0 1.8-1.8 10-9.5 10-14 0-2.8-2.2-5-5-5-1.7 0-3.2.8-4.2 2.1-.3.4-.9.4-1.2 0C9.2 6.8 7.7 6 6 6z"/>
+          <circle cx="10" cy="14" r="2.2" opacity=".9"/>
+          <circle cx="22" cy="14" r="2.2" opacity=".9"/>
+        </svg>
+        <span class="logo-text">LifeLink</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="live-organ.html">Live Organ</a></li>
+          <li><a href="consent-form.html">Register as donor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section fade-in">
+      <h1 class="page-title">LifeLink - Online Organ & Blood Donation Platform</h1>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <h2 class="section-title">Abstract</h2>
+        <p>LifeLink is a hospital-centred platform that connects organ donors with hospitals in need. Donors register through a consent form and provide their full health & medical history, including existing conditions, medications, allergies, and previous surgeries. Multiple hospitals store and share this information securely so that the same donor pool is available across the network.</p>
+        <p class="highlight">When a hospital needs a specific organ, it can locate nearby hospitals with organs (in stock) and access verified donor details and previous health records enabling faster, informed matching and saving more lives.</p>
+        <p>The system supports both living and deceased donation registration. Hospitals can track real-time availability on a map, check organ and blood donor details (with appropriate access controls), and manage consent-based registration all while keeping sensitive data visible only to authorised hospital staff.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <h2 class="section-title">Mission & Vision</h2>
+        <p><strong>Mission:</strong> To create a trusted, transparent link between organ donors and hospitals by maintaining a consent-based registry of donor details and health information. We aim to reduce waiting times and improve match quality by giving hospitals timely access to verified data.</p>
+        <p class="highlight">Our mission is to ensure that every organ available can reach the right recipient in time so that no life is lost for want of the right information or the right connection.</p>
+        <p style="margin-top: 1rem;"><strong>Vision:</strong> A future where no patient waits in vain for an organ. We envision a network in which every registered donor's gift is discoverable by hospitals when and where it is needed, with full respect for consent, privacy, and ethics. We support national and international guidelines (such as WHO and NOTTO) and believe that technology should serve equity: allocation by clinical need, not by wealth or geography.</p>
+        <p class="highlight">Our vision is a world where organ donation is safe, voluntary, and accessible and where hospitals can find the right organ for the right patient at the right time.</p>
+      </div>
+
+      <div class="btn-container">
+    <button onclick="openHospitalDashboard()" class="form-btn">
+        Hospital Dashboard
+    </button>
+</div>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <h2 class="section-title">Goal</h2>
+        <p>LifeLink is designed to achieve the following goals:</p>
+        <ul style="margin: 0.5rem 0 0 1.25rem; padding-left: 1.25rem; color: var(--color-text-muted);">
+          <li>Enable hospitals to locate and track nearby hospitals with organs in stock (real-time in-stock availability) via an interactive map.</li>
+          <li>Provide hospitals with access to organ donor details and full previous health information for informed, safe matching.</li>
+          <li>Support donor registration through a clear consent form and secure storage of donor and health details.</li>
+          <li>Keep donor details and availability checks restricted to hospitals only, not visible to the general public.</li>
+          <li>Promote voluntary, non-remunerated donation and align with ethical guidelines and national regulations.</li>
+        </ul>
+        <p class="highlight">The central goal is to connect every consenting donor with every patient in need through a secure, hospital-only channel that protects privacy and speeds up life-saving transplants.</p>
+      </div>
+
+      <div class="cta-bar">
+        <a href="live-organ.html" class="btn">Find organs / View map</a>
+        <a href="consent-form.html" class="btn btn-secondary">Register as donor</a>
+        <a href="donation.html" class="btn">Donate</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p><a href="index.html">LifeLink</a> - Hospital Organ Donation Platform</p>
+      <p>Contact: support@lifelink.example.org | &copy; <span id="footer-year">2026</span></p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <a href="hospital-login.html">
+    <button class="btn">Hospital Login</button>
+</a>
+
+<script>
+function openHospitalDashboard() {
+    window.location.href = "hosp-login.html";
+}
+</script>
+
+<div style="text-align:center; margin:40px;">
+    <a href="hosp-login.html" 
+       style="padding:15px 25px; 
+              background-color:#007bff; 
+              color:white; 
+              text-decoration:none; 
+              border-radius:6px; 
+              font-size:18px;">
+        Hospital Dashboard
+    </a>
+</div>
+
+</body>
+</html>

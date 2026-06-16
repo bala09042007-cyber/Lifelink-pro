@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs — LifeLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
+          <path d="M16 28c-.3 0-.6-.1-.8-.3C14.2 26.5 4 17.3 4 11c0-3.9 3.1-7 7-7 2.2 0 4.2 1 5.6 2.6C18 4 20 3 22.2 3c3.9 0 7 3.1 7 7 0 6.3-10.2 15.5-11.2 16.7-.2.2-.5.3-.8.3zM11 6c-2.8 0-5 2.2-5 5 0 4.5 8.2 12.2 10 14 .5.5 1.2.5 1.7 0 1.8-1.8 10-9.5 10-14 0-2.8-2.2-5-5-5-1.7 0-3.2.8-4.2 2.1-.3.4-.9.4-1.2 0C9.2 6.8 7.7 6 6 6z"/>
+          <circle cx="10" cy="14" r="2.2" opacity=".9"/>
+          <circle cx="22" cy="14" r="2.2" opacity=".9"/>
+        </svg>
+        <span class="logo-text">LifeLink</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="live-organ.html">Live Organ</a></li>
+          <li><a href="consent-form.html">Register as donor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Frequently Asked Questions</h1>
+    <section class="section fade-in">
+      <div class="accordion">
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq1" id="acc1" data-accordion>
+            What is LifeLink?
+            <span class="icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="faq1" role="region" aria-labelledby="acc1">
+            <p>LifeLink is a platform that helps hospitals find organs for patients in need. Donors register with consent and health details; hospitals can then locate nearby hospitals with organs in stock and access donor information when authorised.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq2" id="acc2" data-accordion>
+            Who can register as a donor?
+            <span class="icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="faq2" role="region" aria-labelledby="acc2">
+            <p>Any adult who wishes to donate organs can register through our consent form. You will need to provide basic details and your health history. Eligibility for actual donation is determined by medical teams at the time, in line with national guidelines.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq3" id="acc3" data-accordion>
+            Can I see donor details as a member of the public?
+            <span class="icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="faq3" role="region" aria-labelledby="acc3">
+            <p>No. Donor details, availability checks, and organ donor information are only accessible to authorised hospitals. The public can use the map to see where hospitals with organs in stock are located, and can register as donors or make donations.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq4" id="acc4" data-accordion>
+            What is the “Live Organ” page?
+            <span class="icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="faq4" role="region" aria-labelledby="acc4">
+            <p>The Live Organ page shows a map of nearby hospitals that have organs in stock. It also has options to check organ donor details (for hospitals), blood donor details, register as a donor (consent form), and to support through donations.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq5" id="acc5" data-accordion>
+            Is my health information safe?
+            <span class="icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="faq5" role="region" aria-labelledby="acc5">
+            <p>Donor information is stored and shared only for the purpose of organ matching. Access to full donor and health details is restricted to hospitals that are part of the system. We follow applicable privacy and data protection standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p><a href="index.html">LifeLink</a> — Hospital Organ Donation Platform</p>
+      <p>Contact: support@lifelink.example.org | &copy; <span id="footer-year">2025</span></p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/faqs.js"></script>
+</body>
+</html>

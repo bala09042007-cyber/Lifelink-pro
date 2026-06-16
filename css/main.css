@@ -1,0 +1,170 @@
+/* ============================================
+   Hospital Organ Donation Platform - Main Styles
+   ============================================ */
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-primary: #0d9488;
+  --color-primary-dark: #0f766e;
+  --color-accent: #10b981;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-trust: #0ea5e9;
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout */
+.site-header {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo:hover { color: var(--color-primary-dark); }
+.logo svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.logo .logo-text { margin-left: 2px; }
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.nav-list a {
+  padding: 0.5rem 0.85rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  background: rgba(13, 148, 136, 0.1);
+  color: var(--color-primary);
+}
+
+/* Hamburger (mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.nav-toggle svg { width: 24px; height: 24px; }
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav-list.is-open { display: flex; }
+  .site-header .inner { flex-wrap: wrap; }
+}
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+.site-footer {
+  background: var(--color-text);
+  color: #cbd5e1;
+  margin-top: auto;
+  padding: 2rem 1.5rem;
+}
+.site-footer .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-footer a { color: #94a3b8; text-decoration: none; }
+.site-footer a:hover { color: #fff; }
+.site-footer p { margin: 0.5rem 0; font-size: 0.9rem; }
+
+/* Page titles */
+.page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 1.5rem;
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Fade-in on scroll (optional, triggered by JS) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

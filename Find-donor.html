@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Blood & Organ Donor - LifeLink</title>
+    <link rel="stylesheet" href="css/styling.css">
+</head>
+<body>
+
+    <div class="search-box">
+        <h1>Find Blood & Organ Donor</h1>
+
+        <!-- Search Filters -->
+        <select id="type">
+            <option value="">Select Donation Type</option>
+            <option value="blood">Blood</option>
+            <option value="organ">Organ</option>
+        </select>
+
+        <select id="bloodGroup">
+            <option value="">Select Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+        </select>
+
+        <select id="organ">
+            <option value="">Select Organ</option>
+            <option>Kidney</option>
+            <option>Liver</option>
+            <option>Heart</option>
+	    <option>Cornea</option>
+	    <option>Ligament</option>
+            <option>Lungs</option>
+        </select>
+
+        <button onclick="searchDonor()">Search</button>
+
+        <!-- Results -->
+        <div id="results"></div>
+    </div>
+
+<script src="hospital.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* ================================
+   GLOBAL STYLING
+================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Beautiful Gradient Background */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+
+/* ================================
+   LOGIN BOX CONTAINER
+================================ */
+
+.login-box {
+    width: 380px;
+    padding: 40px;
+    border-radius: 15px;
+
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.login-box h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   INPUT FIELDS
+================================ */
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+
+    outline: none;
+    font-size: 14px;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.login-box input::placeholder {
+    color: #ddd;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+/* FULL WIDTH BUTTON (For Login Page Only) */
+
+.login-box button.full-width {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-box button.full-width:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.login-box select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.login-box select option {
+    color: black;
+}
+
+/* Compact Button Style */
+
+.form-btn {
+    width: auto;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.form-btn {
+    padding: 10px 25px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+}
+
+.form-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.form-btn {
+    width: auto !important;
+}
+.login-box button.full-width {
+    width: 100%;
+}
+
+
+.medical-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.medical-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    min-height: 100px;
+}
+
+.medical-section textarea::placeholder {
+    color: #ddd;
+}
+
+.search-box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.search-box select,
+.search-box button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+}

@@ -1,0 +1,136 @@
+    <!DOCTYPE html>
+     <html>
+        <head> 
+            <title>Donor Entry Form - LifeLink</title> 
+            <link rel="stylesheet" href="css/styling.css"> 
+            </head> 
+            <body> 
+                <script> if (localStorage.getItem("hospitalLoggedIn") !== "true") { alert("Please login first"); window.location.href = "hosp-login.html"; } </script> 
+                <div class="login-box"> 
+                    <h1>Enter Donor Details</h1> 
+                    <form id="donorForm">
+                        <label>DONOR NAME</label> 
+                        <input type="text" id="name" placeholder="Enter Donor Name"> 
+                        <label>DONOR AGE</label> 
+                        <input type="text" placeholder="Enter Donor Age"> 
+                        <label>CONTACT NUMBER</label> 
+                        <input type="text" id="phone" placeholder="Enter Contact Number"> 
+                        <label>ADDRESS</label> 
+                        <input type="text" placeholder="Enter Address"> 
+                        <label>CITY</label> 
+                        <input type="text" placeholder="Enter City"> 
+                        <label>STATE</label> 
+                        <input type="text" placeholder="Enter State">
+                        <label>AADHAR NUMBER</label> 
+                        <input type="text" id="aadhar" placeholder="Enter Aadhar Number"> 
+                        <label>PAN NUMBER</label> 
+                        <input type="text" placeholder="Enter PAN Number"> 
+                        <label>ORGAN TYPE</label> 
+                        <select id ="organ"> 
+                            <option value="">Select Organ</option> 
+                            <option>Heart</option> 
+                            <option>Kidney</option> 
+                            <option>Liver</option> 
+                            <option>Lungs</option> 
+                            <option>Pancreas</option> 
+                            <option>Cornea</option> 
+                            <option>Intestine</option> 
+                            <option>Skin</option> 
+                            <option>Ligaments</option> 
+                        </select> 
+                        <label>BLOOD GROUP</label> 
+                        <select id="blood"> 
+                            <option value="">Select Blood Group</option> 
+                            <option>A+</option> 
+                            <option>A-</option> 
+                            <option>B+</option> 
+                            <option>B-</option> 
+                            <option>AB+</option> 
+                            <option>AB-</option> 
+                            <option>O+</option> 
+                            <option>O-</option> 
+                        </select> 
+                        <div class="btn-container">
+                            <label>MEDICAL DATA:</label> 
+                            <textarea placeholder="Enter Medical Data"></textarea> 
+                            <button type="button" onclick="processDonor()" class="form-btn">Submit Donor Details</button> 
+                            <button type="button" onclick="findDonor()" class="find-btn">Find Donor</button>
+                        </div> 
+                        <div id="result" style="margin-top:20px; color:green;"></div> 
+                        </form> 
+                        <script> function logout() { localStorage.removeItem("hospitalLoggedIn"); window.location.href = "hosp-login.html"; } </script> 
+                        <script src="js/hospital.js"></script> 
+
+<script>
+
+function maskPhone(phone) {
+    return "******" + phone.slice(-4);
+}
+
+function maskAadhaar(aadhaar) {
+    return "XXXX-XXXX-" + aadhaar.slice(-4);
+}
+
+function processDonor() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let aadhaar = document.getElementById("aadhar").value;
+    let blood = document.getElementById("blood").value;
+    let organ = document.getElementById("organ").value;
+
+    if (!name || !phone || !aadhaar || !blood || !organ) {
+        alert("Please fill required fields.");
+        return;
+    }
+
+    // Mask sensitive data
+    let maskedPhone = maskPhone(phone);
+    let maskedAadhaar = maskAadhaar(aadhaar);
+
+    // Get existing donors array
+    let donors = JSON.parse(localStorage.getItem("donors")) || [];
+
+    // Add new donor
+    donors.push({
+        name: name,
+        phone: maskedPhone,
+        aadhaar: maskedAadhaar,
+        blood: blood,
+        organ: organ
+    });
+
+    // Save updated array
+    localStorage.setItem("donors", JSON.stringify(donors));
+
+    window.location.href = "thankyou.html";
+}
+
+function findDonor() {
+
+    let requiredBlood = document.getElementById("blood").value;
+    let requiredOrgan = document.getElementById("organ").value;
+
+    if (!requiredBlood || !requiredOrgan) {
+        alert("Please select Blood Group and Organ Type.");
+        return;
+    }
+
+    let donors = JSON.parse(localStorage.getItem("donors")) || [];
+
+    let matched = donors.filter(d =>
+        d.blood === requiredBlood &&
+        d.organ === requiredOrgan
+    );
+
+    if (matched.length > 0) {
+        localStorage.setItem("matchedDonors", JSON.stringify(matched));
+        window.location.href = "matched-donors.html";
+    } else {
+        alert("No suitable donor found.");
+    }
+}
+
+
+</script>
+</body> </html>

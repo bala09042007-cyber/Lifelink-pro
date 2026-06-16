@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matched Donors</title>
+</head>
+<body>
+
+<h2>Matched Donors</h2>
+<div id="donorList"></div>
+
+<script>
+let donors = JSON.parse(localStorage.getItem("matchedDonors")) || [];
+let list = document.getElementById("donorList");
+
+if (donors.length > 0) {
+    donors.forEach(d => {
+        list.innerHTML += `
+            <p><b>Name:</b> ${d.name}</p>
+            <p><b>Blood:</b> ${d.blood}</p>
+            <p><b>Organ:</b> ${d.organ}</p>
+            <hr>
+        `;
+    });
+} else {
+    list.innerHTML = "No donors found.";
+}
+</script>
+
+</body>
+</html>
